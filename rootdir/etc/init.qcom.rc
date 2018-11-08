@@ -121,6 +121,17 @@ on early-boot
     chown system graphics /sys/class/graphics/fb0/msm_cmd_autorefresh_en
     chmod 0664 /sys/class/graphics/fb0/msm_cmd_autorefresh_en
     write /sys/class/graphics/fb0/idle_time 100
+	
+    # vendor.health-hal needs to be able to RW
+    chown system system /sys/devices/soc/qpnp-fg-22/cycle_counts_bins
+    # HardwareInfo needs to be able to read CC bins
+    chmod 644 /sys/devices/soc/qpnp-fg-22/cycle_counts_bins
+
+    # dumpstate needs to read, vendor.health-hal needs to be able to RW
+    chown system system /sys/devices/soc/qpnp-fg-22/power_supply/bms/charge_full
+    # HardwareInfo needs to be able to read charge_full
+    chmod 644 /sys/devices/soc/qpnp-fg-22/power_supply/bms/charge_full
+	
 on boot
     chown system system /sys/bus/i2c/devices/3-0038/set_cover_mode
     chmod 0660 /sys/bus/i2c/devices/3-0038/set_cover_mode
@@ -330,6 +341,9 @@ on post-fs-data
     
     #PowerHal
     chown system system /dev/cpu_dma_latency
+	
+    # for android.hardware.health@2.0-service.gemini cycle count backup
+    mkdir /persist/battery 0700 system system
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
