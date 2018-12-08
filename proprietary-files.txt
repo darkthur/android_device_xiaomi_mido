@@ -990,10 +990,6 @@ lib/vendor.qti.hardware.perf@1.0.so|06af4cabd86e643181ecefae95b62338dd319b28
 lib64/vendor.qti.hardware.perf@1.0.so|30798b76c4ef1755b74d17974dc90f39898c9eea
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|de67bdaaf38ba6e0bfd56847cff1c00a9ff1ef79
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
-vendor/etc/perf/commonresourceconfigs.xml|20280e40ca43784316e96be09fe2d2296d79e972
-vendor/etc/perf/perfboostsconfig.xml|7e21bd6dd6fcbbbfc132bccef782ca8bcbe88184
-vendor/etc/perf/targetconfig.xml|1e240759319696ae5920a35d675317b7a4456685
-vendor/etc/perf/targetresourceconfigs.xml|f905a4f59091686d732d7121a9066e79d395056d
 vendor/lib/libperfgluelayer.so|3e6074dca57a25dd07c6398e8a7fc89e7a1d3f2a
 vendor/lib/libqti-perfd-client.so|9d39e6040aae2bda16389679ae2d892cf2d522d1
 vendor/lib/libqti-perfd.so|aab65a0c9d84c8161306a6de81f989cb7e5cb573
