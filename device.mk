@@ -175,7 +175,7 @@ PRODUCT_PACKAGES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    CustomDoze
 
 # DRM
 PRODUCT_PACKAGES += \
