@@ -502,5 +502,9 @@
 
     <!-- Enable auto brightness by default -->
     <bool name="def_screen_brightness_automatic_mode">true</bool>
+
+    <!-- Whether device needs to wait for Qualcomm MPCTL service to start
+         before setting power profiles on boot. -->
+    <bool name="config_waitForMpctlOnBoot">true</bool>
 </resources>
 
