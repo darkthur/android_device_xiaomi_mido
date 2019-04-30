@@ -36,16 +36,43 @@ function 8953_sched_dcvs_eas()
     echo 20000 > /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us
     echo 0 > /sys/devices/system/cpu/cpufreq/schedutil/iowait_boost_enable
 
-    #CPU HZ
+    #Set Min-Frequencies
     echo 652000 >  /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    echo 2016000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    echo 652000 >  /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
-    # SchedTune value for foreground/top-app
-    write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 0
-    write /dev/stune/top-app/schedtune.prefer_idle 1
-    write /dev/stune/rt/schedtune.boost 0
-    write /dev/stune/rt/schedtune.prefer_idle 1
+    # Set Max-Frequencies
+    echo 2016000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    echo 2016000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+
+    # Setup stune parameters
+    echo 980000 > /proc/sys/kernel/sched_rt_runtime_us
+    echo 2000000 > /proc/sys/kernel/sched_latency_ns
+    echo 2200000 > /proc/sys/kernel/sched_min_granularity_ns
+    echo 10000000 > /proc/sys/kernel/sched_wakeup_granularity_ns
+    echo 1 > /dev/stune/schedtune.prefer_idle
+    echo 0 > /dev/stune/cgroup.clone_children
+    echo 0 > /dev/stune/cgroup.sane_behavior
+    echo 0 > /dev/stune/notify_on_release
+    echo 0 > /dev/stune/top-app/schedtune.sched_boost
+    echo 0 > /dev/stune/top-app/notify_on_release
+    echo 0 > /dev/stune/top-app/cgroup.clone_children
+    echo 0 > /dev/stune/foreground/schedtune.sched_boost
+    echo 0 > /dev/stune/foreground/notify_on_release
+    echo 0 > /dev/stune/foreground/cgroup.clone_children
+    echo 0 > /dev/stune/background/schedtune.sched_boost
+    echo 0 > /dev/stune/background/notify_on_release
+    echo 0 > /dev/stune/background/cgroup.clone_children
+    echo 0 > /dev/cpuset/cgroup.clone_children
+    echo 0 > /dev/cpuset/cgroup.sane_behavior
+    echo 0 > /dev/cpuset/notify_on_release
+    echo 0 > /dev/cpuctl/cgroup.clone_children
+    echo 0 > /dev/cpuctl/cgroup.sane_behavior
+    echo 0 > /dev/cpuctl/notify_on_release
+    echo 1000000 > /dev/cpuctl/cpu.rt_period_us
+    echo 0 > /dev/stune/top-app/schedtune.prefer_idle
+    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+    echo 1 > /dev/stune/background/schedtune.prefer_idle
+    echo 1 > /dev/stune/rt/schedtune.prefer_idle
 
     #Disable core control & enable thermal control
     echo 0 > /sys/module/msm_thermal/core_control/enabled
