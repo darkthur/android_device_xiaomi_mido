@@ -2,25 +2,47 @@
 <device name="Android">
     <item name="screen.on">63</item>
     <item name="screen.full">261</item>
-    <array name="cpu.speeds">
-        <value>200000</value>
-        <value>499200</value>
-        <value>533333</value>
-        <value>800000</value>
-        <value>998400</value>
-        <value>1094400</value>
-        <value>1209600</value>
+    <array name="cpu.clusters.cores">
+        <value>4</value>
+        <value>4</value>
     </array>
-    <array name="cpu.active">
-        <value>151</value>
-        <value>169</value>
-        <value>177</value>
-        <value>195</value>
-        <value>259</value>
-        <value>307</value>
-        <value>353</value>
+    <array name="cpu.core_speeds.cluster0">
+        <value>652800</value>
+        <value>1036800</value>
+        <value>1401600</value>
+        <value>1689600</value>
+        <value>1804800</value>
+        <value>1958400</value>
+        <value>2016000</value>
     </array>
-    <item name="cpu.awake">1.6</item>
-    <item name="cpu.idle">1.6</item>
+    <array name="cpu.core_power.cluster0">
+        <value>35</value>
+        <value>45.4</value>
+        <value>60</value>
+        <value>77.5</value>
+        <value>96</value>
+        <value>105</value>
+        <value>112</value>
+    </array>
+    <array name="cpu.core_speeds.cluster1">
+        <value>652800</value>
+        <value>1036800</value>
+        <value>1401600</value>
+        <value>1689600</value>
+        <value>1804800</value>
+        <value>1958400</value>
+        <value>2016000</value>
+    </array>
+    <array name="cpu.core_power.cluster1">
+        <value>35</value>
+        <value>45.4</value>
+        <value>60</value>
+        <value>77.5</value>
+        <value>96</value>
+        <value>105</value>
+        <value>112</value>
+    </array>
+    <item name="cpu.idle">4</item>
+    <item name="cpu.awake">7</item>
     <item name="battery.capacity">4100</item>
 </device>
