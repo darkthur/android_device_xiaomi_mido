@@ -48,8 +48,10 @@ on init
 	
     # Set up schedtune
     write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 10
     write /dev/stune/top-app/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.boost 10
+    write /dev/stune/rt/schedtune.boost 10
+    write /dev/stune/rt/schedtune.prefer_idle 1
 	
     # Mount and use blkio cgroup
     mkdir /dev/blkio
