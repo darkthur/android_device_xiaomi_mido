@@ -72,7 +72,7 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <Config
             Id="0x00001083" Enable="true" Timeout="600"
-            Resources="0x40800100, 0x578" />
+            Resources="0x40800100, 0x579" />
 
     <!--Vertical Scroll boost-->
         <!-- Type="1", Vertical Scroll boost -->
@@ -86,7 +86,7 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <Config
             Id="0x00001080" Type="1" Enable="true"
-            Resources="0x40800100, 0x578" />
+            Resources="0x40800100, 0x579" />
 
     <!--Horizontal Scroll boost-->
         <!-- Type="2", Horizontal Scroll boost -->
@@ -100,7 +100,7 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <Config
             Id="0x00001080" Type="2" Enable="true"
-            Resources="0x40800100, 0x578" />
+            Resources="0x40800100, 0x579" />
     <!--Pre-Fling boost-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -139,3 +139,4 @@
             Resources="0x40800100, 1000, 0x4280C000, 596" />
     </PerfBoost>
 </BoostConfigs>
+
