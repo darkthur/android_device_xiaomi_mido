@@ -985,15 +985,10 @@ vendor/lib64/libvpplibrary.so|982ff0f95c59b8ff126abd9758b5c13aa89efa0f
 vendor/lib/libwms.so|61efcd8bc52e28b7a9b978da0af62355b358887c
 vendor/lib64/libwms.so|57d9f33071f4ae42ac77c98fb82f4e1fe8ac4754
 
-# msm_irqbalance - from Tissot PKQ1.180917.001/V10.0.7.0.PDHMIXM
-vendor/bin/msm_irqbalance|bf933b58332cf94fe4a2072bc3e976a6a82efe3c
-
 # Perf - from Tissot PKQ1.180917.001/V10.0.7.0.PDHMIXM
 lib/vendor.qti.hardware.perf@1.0.so|06af4cabd86e643181ecefae95b62338dd319b28
 lib64/vendor.qti.hardware.perf@1.0.so|30798b76c4ef1755b74d17974dc90f39898c9eea
-vendor/bin/energy-awareness|d9b3f1cc791e0e9612a5ff5df6836af4c921a52b
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|de67bdaaf38ba6e0bfd56847cff1c00a9ff1ef79
-vendor/bin/msm_irqbalance|bf933b58332cf94fe4a2072bc3e976a6a82efe3c
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
 vendor/lib/libperfgluelayer.so|3e6074dca57a25dd07c6398e8a7fc89e7a1d3f2a
 vendor/lib/libqti-perfd-client.so|9d39e6040aae2bda16389679ae2d892cf2d522d1
