@@ -109,7 +109,7 @@ on early-boot
     chmod 0664 /sys/class/graphics/fb0/mode
     chown system graphics /sys/class/graphics/fb0/msm_cmd_autorefresh_en
     chmod 0664 /sys/class/graphics/fb0/msm_cmd_autorefresh_en
-    write /sys/class/graphics/fb0/idle_time 100
+
 on boot
     chown system system /sys/bus/i2c/devices/3-0038/set_cover_mode
     chmod 0660 /sys/bus/i2c/devices/3-0038/set_cover_mode
@@ -303,9 +303,10 @@ on post-fs-data
     mkdir /data/vendor/fm 0770 system system
     chmod 0770 /data/vendor/fm
 
-    # Create related dirs
-    mkdir /data/system/perfd 0770 root system
-    chmod 2770 /data/system/perfd
+    #Create PERFD deamon related dirs
+    mkdir /data/vendor/perfd 0770 root system
+    chmod 2770 /data/vendor/perfd
+    rm /data/vendor/perfd/default_values
 
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
@@ -539,5 +540,3 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
 on property:dev.bootcomplete=1
     setprop sys.io.scheduler "cfq"
 
-    # Enable PowerHAL hint processing
-    setprop vendor.powerhal.init 1
