@@ -27,8 +27,8 @@
 #include "CycleCountBackupRestore.h"
 #include "LearnedCapacityBackupRestore.h"
 
-using ::device::xiaomi::gemini::health::CycleCountBackupRestore;
-using ::device::xiaomi::gemini::health::LearnedCapacityBackupRestore;
+using ::device::xiaomi::mido::health::CycleCountBackupRestore;
+using ::device::xiaomi::mido::health::LearnedCapacityBackupRestore;
 
 static constexpr int kBackupTrigger = 20;
 
